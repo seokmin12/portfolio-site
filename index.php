@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/index.css?aswce">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
     <script src="js/jquery.js"></script>
-    <script src="js/now_time.js?asd"></script>
-    <script src="js/app_load.js?afastesr"></script>
-    <script src="js/project_select.js?ater"></script>
+    <script src="js/now_time.js"></script>
+    <script src="js/app_load.js"></script>
+    <script src="js/project_select.js"></script>
     <script src="js/search.js"></script>
-    <script src="js/setting_select.js?assdd"></script>
-    <script src="js/pw_chk.js?aadd"></script>
-    <script src="js/calendar.js?ssadda"></script>
+    <script src="js/setting_select.js"></script>
+    <script src="js/pw_chk.js"></script>
+    <script src="js/calendar.js"></script>
     <script src="js/send_email.js"></script>
-    <script src="js/weather.js?sasd"></script>
+    <script src="js/weather.js"></script>
     <title>개발자 석민👨‍💻</title>
 </head>
 
