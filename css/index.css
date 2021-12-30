@@ -1,0 +1,607 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://i.ibb.co/LJBBS5L/big-sur.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 100% 100%;   
+    position: fixed;
+    overflow: hidden;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+div#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    border: 1px solid rgba(38,44,50,.4);
+    background-color: rgba(103, 125, 177, 0.5);
+}
+
+div#header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+div#header nav div#logo h1 {
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+div#header nav div#logo h1 a {
+    color: #ffffff;
+}
+
+div#header nav ul#topic {
+    padding-right: 30px;
+    display: flex;
+}
+
+div#header nav ul#topic li {
+    padding: 0px 0px;
+    color: #ffffff;
+}
+
+div#wrap {
+    padding-top: 25px;
+    height: 100%;
+}
+
+div#wrap div#dock {
+    width: 210px;
+    height: 65px;
+    bottom: 5px;
+    border: 1px solid rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 15px;
+    display: flex;
+    margin: auto;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    position: fixed;
+}
+
+div#wrap div#dock div {
+    width: 100%;
+    margin: auto;
+}
+
+div#wrap div#dock div img {
+    width: 65px;
+}
+
+div#wrap div#contents {
+    display: flex;
+    height: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    z-index: 1;
+    width: 30%;
+    margin: auto;
+}
+
+div#wrap div#contents div.icon img {
+    width: 80px;
+    cursor: pointer;
+}
+
+div#wrap div#contents div.icon p {
+    margin-top: 0px;
+}
+
+div#wrap div.popup {
+    width: 55%;
+    height: 60%;
+    margin: auto;
+    border-radius: 20px;
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+    right: 22.5%;
+    left: 22.5%;
+    display: none;
+}
+
+div#wrap div.popup div.popup_header {
+    z-index: 4;
+    position: relative;
+}
+
+div#wrap div.popup div.popup_header span {
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+
+div#wrap div.popup div.popup_header span.red {
+    cursor: pointer;
+    background-color: #ff5f57;
+    border: 1px solid #ff473e;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 8px;
+}
+
+div#wrap div.popup div.popup_header span.red:hover {
+    opacity: .7;
+}
+
+div#wrap div.popup div.popup_header span.yellow {
+    background-color: #f5bd4f;
+    border: 1px solid #f4b437;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
+div#wrap div.popup div.popup_header span.green {
+    background-color: #28c63f;
+    border: 1px solid #24b138;
+}
+
+div#wrap div.popup div.popup_side {
+    width: 25%;
+    max-height: none;
+    padding-top: 0px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: rgba(239,242,245,.75);
+}
+
+div#wrap div.popup div.popup_side ul {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 50px;
+    overflow-y: scroll;
+}
+
+div#wrap div.popup div.popup_side ul li {
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+div#wrap div.popup div.popup_side ul li:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+div#wrap div.popup div.popup_side ul li span {
+    display: inline-block;
+    position: relative;
+    margin-left: 8px;
+    margin-top: 7px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+div#wrap div.popup div.popup_side ul li p {
+    padding-left: 7px;
+    vertical-align: middle;
+    padding-top: 5px;
+    margin: 0px;
+}
+
+div#wrap div.popup div.popup_contents {
+    width: 75%;
+    background-color: #eff2f5;
+    height: 100%;
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow-y: auto;
+}
+
+div#wrap div.popup#folder_popup div.popup_contents div#contents:hover {
+    transition: all 0.1s linear;
+    transform: scale(1.02);
+    opacity: 0.7;
+}
+
+div#wrap div.popup#calendar_popup div.popup_contents#calendar_contents div#YM {
+    width: 80%;
+    flex-direction: column;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+div#wrap div.popup#calendar_popup div.popup_contents#calendar_contents table#calendar {
+    width: 80%;
+    height: 75%;
+    margin: 10px auto auto auto;
+}
+
+div#wrap div.popup#calendar_popup div.popup_contents#calendar_contents table#calendar thead tr {
+    text-align: center;
+    background-color: #F2B7AE;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+
+div#wrap div.popup#calendar_popup div.popup_contents#calendar_contents table#calendar tbody#calendar_body tr td {
+    /* border: 1px solid rgba(0,0,0,.3); */
+    text-align: center;
+    padding: 30px;
+}
+
+div#wrap div.popup div.popup_contents#safari_contents {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+div#wrap div.popup#safari_popup div.popup_contents#safari_contents div#logo {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+div#wrap div.popup#safari_popup div.popup_contents#safari_contents div#search span {
+    position: absolute;
+    background-image: url('../img/search_icon.svg');
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+div#wrap div.popup#safari_popup div.popup_contents#safari_contents div#search input {
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dfe1e5;
+    transition: box-shadow .2s;
+    padding-left: 45px;
+    font-size: 20px;
+}
+
+div#wrap div.popup#safari_popup div.popup_contents#safari_contents div#search input:focus {
+    outline: none;
+}
+
+div#wrap div.popup#mail_popup div.popup_contents {
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+}
+
+div#wrap div.popup#mail_popup div.popup_contents div#mail_form {
+    vertical-align: middle;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+div#wrap div.popup#mail_popup div.popup_contents div#mail_form p {
+    float: left;
+}
+
+div#wrap div.popup#mail_popup div.popup_contents div#mail_form input[type="email"] {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 10px;
+}
+
+div#wrap div.popup#mail_popup div.popup_contents div#mail_form textarea {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 5px 5px 10px;
+    border-radius: 10px;
+}
+
+div#wrap div.popup#mail_popup div.popup_contents div#mail_form input:focus, textarea:focus {
+    outline: none;
+}
+
+div#wrap div.popup#mail_popup div.popup_contents div#mail_form input[type="submit"] {
+    width: 70px;
+    height: 40px;
+    background-color: #00A8FF;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+div#wrap div.popup#mail_popup div.popup_contents div#mail_form input[type="submit"]:hover {
+    background-color: #3FBEFF;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents {
+    display: flex;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div#login {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div#login input#pw {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 5px 5px 5px 10px;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div#login input#pw:focus {
+    outline: none;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div#login input[type="button"] {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #00A8FF;
+    color: #ffffff;
+    border: none;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div#login input[type="button"]:hover {
+    background-color: #3FBEFF;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div.form {
+    margin: auto;
+    width: 80%;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div.form input[type="text"] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div.form input[type="text"]:focus {
+    outline: none;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div.form input[type="submit"] {
+    width: 60px;
+    height: 30px;
+    float: right;
+    background-color: #00A8FF;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+}
+
+div#wrap div.popup#setting_popup div.popup_contents#setting_contents div.form input[type="submit"]:hover {
+    background-color: #3FBEFF;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents {
+    width: 100%;
+    border-radius: 20px;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#memoji {
+    text-align: center;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#memoji img {
+    width: 30%;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#memoji h2 {
+    margin: 0;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#contact_route {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#contact_route li {
+    display: flex;
+    align-items: center;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#contact_route li:hover {
+    transition: all 0.2s linear;
+    transform: scale(1.1);
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#contact_route li h4 {
+    margin-left: 10px;
+    display: inline-;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#contact_route li#email_route span {
+    background-image: url(../img/email.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#contact_route li#github_route span {
+    background-image: url(../img/github.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+}
+
+div#wrap div.popup#contact_popup div.popup_contents div#contact_route li#insta_route span {
+    background-image: url(../img/instagram.svg);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+}
+
+div#wrap div.popup#weather_popup div.popup_contents div#weather_main div#temp {
+    text-align: center;
+}
+
+div#wrap div.popup#weather_popup div.popup_contents div#weather_main div#condition {
+    text-align: center;
+}
+
+div#wrap div.popup#weather_popup div.popup_contents div#weather_main div#forecast {
+    white-space: nowrap;
+    overflow: auto;
+}
+
+div#wrap div.popup#weather_popup div.popup_contents div#weather_main div#forecast li {
+    margin: 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+div#wrap div.popup div.popup_contents div#contents {
+    border: 1px solid #222;
+    width: 95%;
+    margin-top: 20px;
+    left: 2.5%;
+    right: 2.5%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+div#wrap div.popup div.popup_contents div#contents:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+div#wrap div.popup div.popup_contents div#contents:hover > div {
+    color: rgba(0,0,0,.5);
+}
+
+@media screen and (max-width: 768px) {
+    div#wrap {
+        width: 100%;
+    }
+
+    div#wrap div#contents {
+        width: 100%;
+    }
+
+
+    div#wrap div.popup {
+        width: 100%;
+        right: 0px;
+        left: 0px;
+        top: 0;
+        height: 100%;
+    }
+
+    div#wrap div.popup div.popup_header {
+        position: absolute;
+    }
+
+    div#wrap div.popup div.popup_side {
+        width: 100%;
+        height: 100px;
+        border-radius: 0;
+    }
+
+    div#wrap div.popup div.popup_side ul {
+        padding-top: 40px;
+        flex-direction: row;
+        height: 100px;
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+
+    div#wrap div.popup div.popup_side ul li {
+        flex-direction: row;
+        padding-right: 10px;
+        display: inline-flex;
+    }
+
+    div#wrap div.popup div.popup_contents {
+        width: 100%;
+        top: 100px;
+        border-radius: 0;
+    }
+
+    div#wrap div.popup#calendar_popup div.popup_contents#calendar_contents div#YM {
+        margin-top: 50px;
+    }
+
+    div#wrap div.popup#calendar_popup div.popup_contents#calendar_contents table#calendar {
+        height: 40%;
+    }
+
+    div#wrap div.popup#calendar_popup div.popup_contents#calendar_contents table#calendar tbody#calendar_body tr td {
+        padding: 0px;
+    }
+
+    div#wrap div.popup#safari_popup div#safari_contents {
+        top: 0;
+        border-radius: 0;
+    }
+
+    div#wrap div.popup#mail_popup div.popup_contents {
+        top: 0;
+    }
+
+    div#wrap div.popup#contact_popup div.popup_contents {
+        top: 0;
+    }
+
+    div#wrap div.popup#contact_popup div.popup_contents div#memoji {
+        margin-top: 100px;
+    }
+
+    div#wrap div.popup#weather_popup div.popup_side ul#weather_side h3 {
+        flex-direction: row;
+        padding-right: 10px;
+        display: inline-flex;
+        margin-top: 0;
+    }
+    
+}
